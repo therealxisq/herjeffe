@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riviera</title>
+    
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+  <meta name="theme-color" content="#FF0041">
+
+  <meta property="og:title" content="Riviera - The new era of Roblox exploiting">
+  <meta property="og:description" content="We stand out as the most trusted provider, relied upon by countless users for our exclusive software.">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="https://getriviera.pages.dev">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Riviera - The new era of Roblox Exploiting">
+  <meta name="twitter:description" content="We stand out as the most trusted provider, relied upon by countless professional players for our exclusive software.">
+  <meta name="twitter:image" content="">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        :root {
+            --primary: #FF0041;
+            --background: #111111;
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+        }
+
+        .navbar {
+            background: rgb(20, 20, 20);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .main-content {
+            margin-top: 120px;
+            padding: 2rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .left-content {
+            flex: 1;
+        }
+
+        .right-content {
+            flex: 1;
+        }
+
+        .hero-section {
+            text-align: left;
+            margin-bottom: 4rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+    padding: 0.8rem 2rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary), #ff2060);
+    color: var(--text);
+    box-shadow: 0 4px 10px rgba(255, 0, 65, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #333, #555);
+    color: var(--text);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 0, 65, 0.6);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #ff2060, #ff0041);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(45deg, #555, #777);
+}
+
+
+        .features-section {
+            margin-top: 2rem;
+        }
+
+        .features-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid transparent;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(255, 0, 65, 0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            color: var(--text);
+        }
+
+        .feature-card p {
+            color: #888;
+            line-height: 1.6;
+        }
+
+        .image-section {
+            margin-top: 4rem;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-image:hover {
+            transform: scale(1.02);
+        }
+
+        .icon-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: auto;
+    }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .right-content {
+                margin-top: 2rem;
+            }
+        }
+
+        .logo-container {
+        margin-right: auto;
+    }
+
+    .logo {
+        height: 50px; 
+        width: auto; 
+    }
+
+    .brand-title {
+        color: var(--text);
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Riviera Logo" class="logo">
+        </div>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="https://discord.gg/AQFDR7wSRs" class="nav-link">Discord</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="left-content">
+                <section class="hero-section animate__animated animate__fadeIn">
+                    <h1 class="hero-title animate__animated animate__fadeInDown">Riviera, Bringing out the new era of exploiting.</h1>
+                    <p class="hero-subtitle animate__animated animate__fadeIn" style="animation-delay: 0.2s">
+                        We stand out as the most trusted provider, relied upon by countless users for our exclusive software.
+                    </p>
+                    <div class="buttons-container">
+                        <a href="RivieraBootstrapperLatest.zip" class="btn btn-primary animate__animated animate__fadeIn" style="animation-delay: 0.3s">
+                            Download Now
+                        </a>
+                        <a href="https://discord.gg/AQFDR7wSRs" class="btn btn-secondary animate__animated animate__fadeIn" style="animation-delay: 0.4s">
+                            Discord Server
+                        </a>
+                    </div>
+
+                    <section class="image-section">
+                        <img src="image.png" alt="Feature Preview" class="feature-image animate__animated animate__fadeIn">
+                    </section>
+                </section>
+            </div>
+
+            <div class="right-content">
+                <section class="features-section">
+                    <h2 class="features-title animate__animated animate__fadeIn">What Makes Us Different</h2>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.1s">
+                            <div class="icon-container">
+                                <img src="free.svg" alt="FREE" class="feature-icon">
+                            </div>
+                            <h3>Free</h3>
+                            <p>Riviera is 100% free to use for all users.</p>
+                        </div>
+                        
+                        <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                            <div class="icon-container">
+                                <img src="code-xml.svg" alt="UNC" class="feature-icon">
+                            </div>
+                            <h3>100% UNC</h3>
+                            <p>Riviera has a high UNC making it better than most executors on the market.</p>
+                        </div>
+                        
+                        <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
+                            <div class="icon-container">
+                                <img src="unlock.svg" alt="Keyless" class="feature-icon">
+                            </div>
+                            <h3>Keyless</h3>
+                            <p>We are one  of the few executors that are keyless, making it easier to use.</p>
+
+                        </div>     
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
